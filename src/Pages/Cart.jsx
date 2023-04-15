@@ -21,6 +21,13 @@ const ProductsArea = styled.div`
     height: 320px;
     width: 230px;
     border: 1px solid #d4c705;
+
+    button{
+      font-size: 25px;
+      background: transparent;
+      border: none;
+      color: #1f2ce2;
+    }
   }
 `
 
