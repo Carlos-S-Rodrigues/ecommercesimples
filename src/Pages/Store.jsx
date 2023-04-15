@@ -1,13 +1,14 @@
 import React, { useEffect } from "react"
 import { useState } from "react"
 import{BsFillCartCheckFill, BsFillCartPlusFill} from 'react-icons/bs'
+import {getItem, setItem} from '../services/LocalStorageFunctions'
 
 
 
 export const Store = () =>{
 
   const [data, setData] = useState([])
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(getItem('cartMl') ||[])
 
   useEffect(()=>{
     const fetchApi = async () =>{
@@ -24,8 +25,10 @@ export const Store = () =>{
     if(element){
       const arrFilter = cart.filter((e) => e.id !== obj.id )
       setCart(arrFilter)
+      setItem('cartMl', arrFilter)
     }else{
       setCart([...cart,obj])
+      setItem('cartMl',[...cart,obj])
     }
   }
   return(
