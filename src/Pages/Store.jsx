@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { useState } from "react"
 import{BsFillCartCheckFill, BsFillCartPlusFill} from 'react-icons/bs'
 import {getItem, setItem} from '../services/LocalStorageFunctions'
-import {Link} from 'react-router-dom'
+import { ProductsArea, PageTitle} from "../styles/style"
 
 
 
@@ -34,12 +34,12 @@ export const Store = () =>{
   }
   return(
     <>
-    <Link to='/cart'>Cart</Link>
-    <h1>Store</h1>
-    <div>
+ 
+    <PageTitle>Produtos em Promoção!!</PageTitle>
+    <ProductsArea>
       {
         data.map((e) => (
-          <div key={e.id}>
+          <div className="content" key={e.id}>
             <h4>{e.title}</h4>
             <img src={e.thumbnail} alt="Cellphone" />
             <h4>{e.price}</h4>
@@ -51,7 +51,7 @@ export const Store = () =>{
           </div>
         ))
       }
-    </div>
+    </ProductsArea>
     </>
   )
 
