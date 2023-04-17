@@ -10,6 +10,17 @@ export const PageTitle = styled.h1`
   color: #fff;
   margin-top: 40px;
   border-radius: 4px;
+  @media (max-width: 768px) {
+    width: 80%;
+    font-size: 24px;
+    padding-top: 6px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 20px;
+  }
 `
 
 export const Subtotal = styled.h3`
@@ -22,6 +33,16 @@ export const Subtotal = styled.h3`
   width: 30%;
   padding: 10px;
   color: #1f2ce2;
+  @media (max-width: 768px) {
+    width: 80%;
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 20px;
+  }
 `
 
 export const ProductsArea = styled.div`
