@@ -12,6 +12,18 @@ export const PageTitle = styled.h1`
   border-radius: 4px;
 `
 
+export const Subtotal = styled.h3`
+  text-align: center;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #1f2ce2;
+  border-radius: 6px;
+  width: 30%;
+  padding: 10px;
+  color: #1f2ce2;
+`
+
 export const ProductsArea = styled.div`
   display: flex;
   justify-content: center;
@@ -55,7 +67,9 @@ export const HeaderStyles = styled.div`
     font-weight: 600;
 
     &:hover {
-      text-decoration: underline;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      margin: 0 0 2px;
       color: #c5c5c5;
     }
   }

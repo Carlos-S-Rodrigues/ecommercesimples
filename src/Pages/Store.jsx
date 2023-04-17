@@ -42,8 +42,8 @@ export const Store = () =>{
           <div className="content" key={e.id}>
             <h4>{e.title}</h4>
             <img src={e.thumbnail} alt="Cellphone" />
-            <h4>{e.price}</h4>
-            <button onClick={() => handleClick(e)}>
+            <h4>{`R$ ${e.price}`}</h4>
+            <button onClick={() => handleClick(e)}> 
               {
                 cart.some((itemCart) => itemCart.id === e.id) ? (<BsFillCartCheckFill/>) : (<BsFillCartPlusFill/>)
               }
